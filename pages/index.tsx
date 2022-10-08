@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next'
 import Head from 'next/head'
@@ -12,6 +13,7 @@ import Projects from '../components/Projects/Projects'
 import Skills from '../components/Skills/Skills'
 
 const Home: NextPage = () => {
+  const avatarImg = 'https://avatars.githubusercontent.com/u/35251388?s=400&u=33619f9daabb7ab80de755ee76189d2d28618fe7&v=4'
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0
     scrollbar scrollbar-track-gray-400/2 scrollbar-thumb-[#F7AB0A]/80'>
@@ -45,14 +47,14 @@ const Home: NextPage = () => {
       <section id="contactMe" className='snap-start'>
         <ContactMe />
       </section>
-      
+
       <Link href="#hero">
         <footer className='sticky bottom-5 w-full cursor-pointer'>
-            <div className='flex items-center justify-center'>
-              <img  className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
+          <div className='flex items-end justify-end mr-5'>
+            <img className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
               alt="test"
-              src="https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png"/>
-            </div>
+              src={avatarImg} />
+          </div>
         </footer>
       </Link>
     </div>

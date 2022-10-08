@@ -1,6 +1,7 @@
 import React from 'react'
 import { SocialIcon } from 'react-social-icons';
 import { motion } from "framer-motion";
+import Link from 'next/link';
 
 type Props = {}
 
@@ -19,18 +20,13 @@ export default function Header({ }: Props) {
                 }}
                 transition={{ duration: 1.5 }}
                 className='flex flex-row items-center'>
-                <SocialIcon url="https://twitter.com/Dev_VikasKumar" fgColor='gray'
-                    bgColor='transparent' />
-
-                <SocialIcon url="https://twitter.com/Dev_VikasKumar" fgColor='gray'
-                    bgColor='transparent' />
-
-                <SocialIcon url="https://twitter.com/Dev_VikasKumar" fgColor='gray'
-                    bgColor='transparent' />
-
-                <SocialIcon url="https://twitter.com/Dev_VikasKumar" fgColor='gray'
-                    bgColor='transparent' />
+                <Link href="#hero"><button className="heroButton text-xs text-gray-400">Home</button></Link>
+                <Link href="#about"><button className="heroButton text-xs text-gray-400">About</button></Link>
+                <Link href="#experience"><button className="heroButton text-xs text-gray-400">Experience</button></Link>
+                <Link href="#skills"><button className="heroButton text-xs text-gray-400">Skills</button></Link>
+                <Link href="#projects"><button className="heroButton text-xs text-gray-400">Projects</button></Link>
             </motion.div>
+
             <motion.div
                 initial={{
                     x: 500, opacity: 0,
@@ -47,8 +43,8 @@ export default function Header({ }: Props) {
                     network='email'
                     fgColor='gray'
                     bgColor='transparent' />
-                <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
             </motion.div>
+
         </header>
     )
 }
